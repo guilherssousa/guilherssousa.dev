@@ -8,31 +8,25 @@ import Section from "components/section";
 import WorkCard from "components/work-card";
 import SimpleLink from "components/simple-link";
 
-import correioImage from "assets/correio.png";
-import hookpediaImage from "assets/hookpedia.png";
-import portfolioImage from "assets/portfolio.png";
-import dramalandImage from "assets/dramaland.png";
-import p44bloImage from "assets/p44blo.png";
-
 const works = {
   current: [
     {
       name: "Correio Anônimo",
-      imageUrl: correioImage,
+      imageUrl: "/correio.png",
       description:
         "Envie mensagens de forma anônima para suas pessoas queridas usando seus nomes de usuário do Twitter.",
       link: "https://correioanonimo.com.br",
     },
     {
       name: "Hookpedia",
-      imageUrl: hookpediaImage,
+      imageUrl: "/hookpedia.png",
       description:
         "Um repositório de Hooks do React, feito pela comunidade lusófona.",
       link: "https://hookpedia.now.sh",
     },
     {
       name: "Guilherme Sousa",
-      imageUrl: portfolioImage,
+      imageUrl: "/portfolio.png",
       description: "Este site que você está acessando!",
       link: "https://guilherssousa.dev",
     },
@@ -40,14 +34,14 @@ const works = {
   past: [
     {
       name: "Dramaland",
-      imageUrl: dramalandImage,
+      imageUrl: "/dramaland.png",
       description:
         "Um portal de notícias, resenhas e opinião do mundo da dramaturgia coreana.",
       link: "https://dramaland.now.sh",
     },
     {
       name: "p44blo",
-      imageUrl: p44bloImage,
+      imageUrl: "/p44blo.png",
       description: "Ruan 'p44blo' Dias é um editor de vídeos de Blumenau/SC.",
       link: "https://ruanpdias.com",
     },
