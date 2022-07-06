@@ -18,16 +18,16 @@ const Home: NextPage = () => {
       <main className="flex flex-col-reverse md:flex-row w-full md:items-start justify-between gap-x-4">
         <div>
           <h1 className="text-3xl sm:text-4xl font-bold">Guilherme Sousa</h1>
-          <div className="mt-2 font-semibold text-stone-400">
+          <div className="text-small sm:text-base mt-2 font-semibold text-stone-400">
             Fullstack Developer @ Mais Esports
           </div>
 
-          <p className="whitespace-pre-line mt-2 text-stone-400 leading-relaxed">
+          <p className="text-small sm:text-base whitespace-pre-line mt-2 text-stone-400 leading-relaxed">
             Gosto de escrever atigos sobre tech, dev e outros assuntos variados.
             Contribuidor open source de traduções e Freelancer nas horas vagas.
           </p>
         </div>
-        <div className="mb-8 w-32 h-32 sm:w-32 sm:h-32 md:w-auto md:h-auto order-1 md:order-2 flex items-center justify-center rounded-full ring-4 ring-orange-400 relative overflow-hidden">
+        <div className="mb-8 w-24 h-24 sm:w-32 sm:h-32 md:w-auto md:h-auto order-1 md:order-2 flex items-center justify-center rounded-full ring-4 ring-orange-400 relative overflow-hidden">
           <Image
             src="https://github.com/guilherssousa.png"
             alt="Hi, this is me."
