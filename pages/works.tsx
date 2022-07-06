@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import Container from "components/container";
 import Heading from "components/heading";
 import Section from "components/section";
 
 const Works: NextPage = () => {
   return (
-    <>
+    <Container>
       <Head>
         <title>Guilherme Sousa | Trabalhos</title>
       </Head>
@@ -18,7 +19,7 @@ const Works: NextPage = () => {
           open source.
         </p>
       </Section>
-    </>
+    </Container>
   );
 };
 

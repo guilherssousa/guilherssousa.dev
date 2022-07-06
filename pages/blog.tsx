@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import Container from "components/container";
 import Heading from "components/heading";
 import Section from "components/section";
 import SimpleLink from "components/simple-link";
 
 const Blog: NextPage = () => {
   return (
-    <>
+    <Container>
       <Head>
         <title>Guilherme Sousa | Blog</title>
       </Head>
@@ -23,7 +24,7 @@ const Blog: NextPage = () => {
           .
         </p>
       </Section>
-    </>
+    </Container>
   );
 };
 

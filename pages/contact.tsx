@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import Container from "components/container";
 import Heading from "components/heading";
 import Section from "components/section";
 
 const Contact: NextPage = () => {
   return (
-    <>
+    <Container>
       <Head>
         <title>Guilherme Sousa | Contato</title>
       </Head>
@@ -17,7 +18,7 @@ const Contact: NextPage = () => {
           alguma postagem? Deseja falar sobre Pokemóns? Entre em contato comigo!
         </p>
       </Section>
-    </>
+    </Container>
   );
 };
 

@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
 
+import Container from "components/container";
+
 import FeaturingCard from "components/featuring-card";
 import SimpleLink from "components/simple-link";
 import Section from "components/section";
@@ -10,7 +12,7 @@ import Heading from "components/heading";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Container>
       <Head>
         <title>Guilherme Sousa</title>
       </Head>
@@ -76,7 +78,7 @@ const Home: NextPage = () => {
           </p>
         </Section>
       </div>
-    </>
+    </Container>
   );
 };
 
