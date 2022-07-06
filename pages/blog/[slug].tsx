@@ -20,6 +20,8 @@ interface Props {
 const Post: NextPage<Props> = ({ post }) => {
   const MDXContent = useMDXComponent(post.body.code);
 
+  const title = `${post.title}  | Guilherme Sousa`;
+
   const formatedDate = new Date(post.date).toLocaleDateString("pt-BR", {
     day: "2-digit",
     month: "long",
@@ -34,7 +36,7 @@ const Post: NextPage<Props> = ({ post }) => {
   return (
     <Container>
       <Head>
-        <title>{post.title} | Guilherme Sousa</title>
+        <title>{title}</title>
       </Head>
       <Section>
         <div>
