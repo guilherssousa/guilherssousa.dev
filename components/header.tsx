@@ -58,7 +58,7 @@ const Header = () => {
       `}
       ref={headerRef}
     >
-      <nav className="flex gap-x-6 font-bold text-lg text-stone-400">
+      <nav className="flex gap-x-4 md:gap-x-6 font-bold text-lg text-stone-400">
         {routes.map((route) => (
           <Link key={route.path} href={route.path} passHref>
             <a

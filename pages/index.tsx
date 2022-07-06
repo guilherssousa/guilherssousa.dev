@@ -15,9 +15,9 @@ const Home: NextPage = () => {
         <title>Guilherme Sousa</title>
       </Head>
 
-      <main className="flex w-full items-start justify-between gap-x-4">
+      <main className="flex flex-col-reverse md:flex-row w-full md:items-start justify-between gap-x-4">
         <div>
-          <h1 className="text-4xl font-bold">Guilherme Sousa</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold">Guilherme Sousa</h1>
           <div className="mt-2 font-semibold text-stone-400">
             Fullstack Developer @ Mais Esports
           </div>
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             horas vagas.
           </p>
         </div>
-        <div className="flex items-center justify-center rounded-full ring-4 ring-orange-400 relative overflow-hidden">
+        <div className="mb-6 w-32 h-32 md:w-auto md:h-auto order-1 md:order-2 flex items-center justify-center rounded-full ring-4 ring-orange-400 relative overflow-hidden">
           <Image
             src="https://github.com/guilherssousa.png"
             alt="Hi, this is me."
