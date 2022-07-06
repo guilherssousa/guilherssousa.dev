@@ -52,7 +52,7 @@ const Contact: NextPage = () => {
           </div>
           <div className="w-full mt-6 flex justify-end">
             <button
-              className="bg-orange-900 text-orange-300 font-bold px-4 py-2 rounded-lg"
+              className="bg-orange-800 hover:bg-orange-900 hover:text-orange-400 text-orange-300 font-bold px-4 py-2 rounded-lg"
               type="submit"
             >
               Enviar
