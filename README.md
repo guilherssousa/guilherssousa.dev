@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Guilherme Sousa
 
-## Getting Started
+<!-- TABLE OF CONTENTS -->
 
-First, run the development server:
+## Tabela de Conteúdo
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Tabela de Conteúdo](#tabela-de-conte%C3%BAdo)
+- [Sobre o Projeto](#sobre-o-projeto)
+  - [Feito Com](#feito-com)
+- [Contribuição](#contribui%C3%A7%C3%A3o)
+- [Licença](#licen%C3%A7a)
+- [Contato](#contato)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- ABOUT THE PROJECT -->
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Sobre o Projeto
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Meu postfólio pessoal, incluindo também blog com postagens de assuntos diversos.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Feito Com
 
-## Learn More
+Abaixo segue o que foi utilizado na criação do portal:
 
-To learn more about Next.js, take a look at the following resources:
+- [TypeScript](https://www.typescriptlang.org/) - O TypeScript é um super-set do Javascript que adiciona tipagem forte ao código.
+- [Next.js](https://nextjs.org/) - O Next.js é um framework React que ajuda a ter uma experiência melhor com ferramentas de desenvolvimento.
+- [React](https://pt-br.reactjs.org/) - O React é uma biblioteca JavaScript para criar interfaces de usuário.
+- [Tailwind CSS](https://tailwindcss.com/) - O Tailwind CSS é um framework CSS formado por classes utilitárias para agilizar o desenvolvimento.
+- [Framer Motion](https://www.framer.com/motion/) - O Framer Motion é uma biblioteca para criação de animações em React.
+- [Contentlayer](https://www.framer.com/motion/) - O Contentlayer é um SDK que valida e transforma conteúdos em JSON.
+- [MDX](https://mdxjs.com/) - O MDX é um superset do Markdown que permite usar JSX no conteúdo.
+- [ESLint](https://eslint.org/) - O ESLint é uma ferramenta de lint plugável para JavaScript e JSX;
+- [Prettier](https://prettier.io/) - O Prettier atualiza seu código automaticamente seguindo os padrões que você quiser toda vez salva o arquivo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!-- CONTRIBUTING -->
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contribuição
 
-## Deploy on Vercel
+Contribuições fazem o ambiente Open Source ficar muito mais interessante! Qualquer contribuição que você fizer será **muito apreciada**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Faça um Fork do projeto
+2. Crie uma Branch para sua Feature (`git checkout -b feat/yeyy`)
+3. Adicione suas mudanças (`git add .`)
+4. Comite suas mudanças (`git commit -m 'Adicionando uma Feature incrível!`)
+5. Faça o Push da Branch (`git push origin feat/yeyy`)
+6. Abra um Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<!-- LICENSE -->
+
+## Licença
+
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+
+<!-- CONTACT -->
+
+## Contato
+
+Guilherme da Silva Sousa
+[LinkedIn](https://linkedin.com/in/guilhermedasilvasousa)
+[Twitter](https://twitter.com/krteazy)
