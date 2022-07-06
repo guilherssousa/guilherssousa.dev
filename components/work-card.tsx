@@ -16,11 +16,11 @@ const WorkCard: React.FC<Props> = ({ name, imageUrl, description, link }) => {
           <Image
             src={imageUrl}
             alt={name}
-            layout="fill"
-            objectFit="cover"
+            width={480}
+            height={270}
             placeholder="blur"
             loading="lazy"
-            blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8f5KhHgAG4AJJ/M2wwwAAAABJRU5ErkJggg=="
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8f5KhHgAG4AJJ/M2wwwAAAABJRU5ErkJggg=="
           />
         </div>
 
