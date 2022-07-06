@@ -83,7 +83,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const sortByDate = (a: string, b: string) =>
     new Date(b).getTime() - new Date(a).getTime();
 
@@ -100,6 +100,6 @@ export async function getStaticProps() {
         })),
     },
   };
-}
+};
 
 export default Blog;
