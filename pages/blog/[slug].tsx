@@ -38,7 +38,7 @@ const Post: NextPage<Props> = ({ post }) => {
       </Head>
       <Section>
         <div>
-          <div className="font-bold text-4xl text-neutral-100 leading-snug">
+          <div className="font-bold text-2xl sm:text-3xl md:text-4xl text-neutral-100 leading-snug">
             {post.title}
           </div>
           <div className="mt-2 text-sm sm:text-base text-stone-500">
