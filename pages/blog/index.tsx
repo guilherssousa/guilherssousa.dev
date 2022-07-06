@@ -31,7 +31,7 @@ const Blog: NextPage<Props> = ({ posts }) => {
   return (
     <Container>
       <Head>
-        <title>Guilherme Sousa | Blog</title>
+        <title>Blog | Guilherme Sousa</title>
       </Head>
       <Section>
         <Heading title="Blog" />

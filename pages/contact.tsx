@@ -9,7 +9,7 @@ const Contact: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>Guilherme Sousa | Contato</title>
+        <title>Contato | Guilherme Sousa</title>
       </Head>
       <Section>
         <Heading title="Vamos conversar?" />

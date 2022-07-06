@@ -52,7 +52,7 @@ const Works: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>Guilherme Sousa | Trabalhos</title>
+        <title>Trabalhos | Guilherme Sousa</title>
       </Head>
 
       <Section>
