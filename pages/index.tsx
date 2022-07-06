@@ -22,13 +22,12 @@ const Home: NextPage = () => {
             Fullstack Developer @ Mais Esports
           </div>
 
-          <p className="mt-2 text-stone-400 leading-relaxed">
-            Gosto de escrever atigos sobre desenvolvimentos e outros assuntos
-            variados. Contribuidor open source de traduções e Freelancer nas
-            horas vagas.
+          <p className="whitespace-pre-line mt-2 text-stone-400 leading-relaxed">
+            Gosto de escrever atigos sobre tech, dev e outros assuntos variados.
+            Contribuidor open source de traduções e Freelancer nas horas vagas.
           </p>
         </div>
-        <div className="mb-6 w-32 h-32 md:w-auto md:h-auto order-1 md:order-2 flex items-center justify-center rounded-full ring-4 ring-orange-400 relative overflow-hidden">
+        <div className="mb-8 w-32 h-32 sm:w-32 sm:h-32 md:w-auto md:h-auto order-1 md:order-2 flex items-center justify-center rounded-full ring-4 ring-orange-400 relative overflow-hidden">
           <Image
             src="https://github.com/guilherssousa.png"
             alt="Hi, this is me."

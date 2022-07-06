@@ -34,7 +34,7 @@ const links = {
 
 const Footer = () => {
   return (
-    <footer className="mt-16 text-stone-500 pb-16 border-t pt-6 border-stone-800">
+    <footer className="mt-16 text-sm sm:text-base text-stone-500 pb-16 border-t pt-6 border-stone-800">
       <div className="md:grid md:grid-cols-3">
         <div>
           {internalLinks.map((link) => (
