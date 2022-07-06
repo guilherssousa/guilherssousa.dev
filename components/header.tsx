@@ -62,8 +62,8 @@ const Header = () => {
         {routes.map((route) => (
           <Link key={route.path} href={route.path} passHref>
             <a
-              className={`border-b-2 border-b-transparent hover:border-orange-500 hover:text-white transition-color ${
-                isRouteActive(route.path) ? "text-white" : ""
+              className={`border-b-2 border-b-transparent hover:border-orange-500 hover:text-neutral-100 transition-color ${
+                isRouteActive(route.path) ? "text-neutral-100" : ""
               }`}
             >
               {route.label}
