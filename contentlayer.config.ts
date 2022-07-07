@@ -62,6 +62,11 @@ export const Work = defineDocumentType(() => ({
       description: "URL do trabalho",
       required: true,
     },
+    status: {
+      type: "string",
+      description: "Status do trabalho",
+      required: true,
+    },
   },
   computedFields: {
     slug: {
@@ -70,10 +75,6 @@ export const Work = defineDocumentType(() => ({
         post._raw.sourceFileName
           // hello-world.mdx => hello-world
           .replace(/\.mdx$/, ""),
-    },
-    readingTime: {
-      type: "json",
-      resolve: (post) => readingTime(post.body.raw),
     },
   },
 }));

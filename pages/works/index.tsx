@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import { allWorks, type Work } from ".contentlayer/generated";
+
 import Container from "components/container";
 import Heading from "components/heading";
 import Section from "components/section";
@@ -8,47 +10,54 @@ import Section from "components/section";
 import WorkCard from "components/work-card";
 import SimpleLink from "components/simple-link";
 
-const works = {
-  current: [
-    {
-      name: "Correio Anônimo",
-      imageUrl: "/correio.png",
-      description:
-        "Envie mensagens de forma anônima para suas pessoas queridas usando seus nomes de usuário do Twitter.",
-      link: "https://correioanonimo.com.br",
-    },
-    {
-      name: "Hookpedia",
-      imageUrl: "/hookpedia.png",
-      description:
-        "Um repositório de Hooks do React, feito pela comunidade lusófona.",
-      link: "https://hookpedia.now.sh",
-    },
-    {
-      name: "Guilherme Sousa",
-      imageUrl: "/portfolio.png",
-      description: "Este site que você está acessando!",
-      link: "https://guilherssousa.dev",
-    },
-  ],
-  past: [
-    {
-      name: "Dramaland",
-      imageUrl: "/dramaland.png",
-      description:
-        "Um portal de notícias, resenhas e opinião do mundo da dramaturgia coreana.",
-      link: "https://dramaland.now.sh",
-    },
-    {
-      name: "p44blo",
-      imageUrl: "/p44blo.png",
-      description: "Ruan 'p44blo' Dias é um editor de vídeos de Blumenau/SC.",
-      link: "https://ruanpdias.com",
-    },
-  ],
-};
+// const works = {
+//   current: [
+//     {
+//       name: "Correio Anônimo",
+//       imageUrl: "/correio.png",
+//       description:
+//         "Envie mensagens de forma anônima para suas pessoas queridas usando seus nomes de usuário do Twitter.",
+//       link: "https://correioanonimo.com.br",
+//     },
+//     {
+//       name: "Hookpedia",
+//       imageUrl: "/hookpedia.png",
+//       description:
+//         "Um repositório de Hooks do React, feito pela comunidade lusófona.",
+//       link: "https://hookpedia.now.sh",
+//     },
+//     {
+//       name: "Guilherme Sousa",
+//       imageUrl: "/portfolio.png",
+//       description: "Este site que você está acessando!",
+//       link: "https://guilherssousa.dev",
+//     },
+//   ],
+//   past: [
+//     {
+//       name: "Dramaland",
+//       imageUrl: "/dramaland.png",
+//       description:
+//         "Um portal de notícias, resenhas e opinião do mundo da dramaturgia coreana.",
+//       link: "https://dramaland.now.sh",
+//     },
+//     {
+//       name: "p44blo",
+//       imageUrl: "/p44blo.png",
+//       description: "Ruan 'p44blo' Dias é um editor de vídeos de Blumenau/SC.",
+//       link: "https://ruanpdias.com",
+//     },
+//   ],
+// };
 
-const Works: NextPage = () => {
+interface Props {
+  works: {
+    current: Work[];
+    past: Work[];
+  };
+}
+
+const Works: NextPage<Props> = ({ works }) => {
   return (
     <Container>
       <Head>
@@ -112,6 +121,26 @@ const Works: NextPage = () => {
       </Section>
     </Container>
   );
+};
+
+export const getStaticProps = async () => {
+  const mapToProps = (work: Work) => ({
+    name: work.name,
+    imageUrl: work.imageUrl,
+    description: work.description,
+    link: `/works/${work.slug}`,
+  });
+
+  return {
+    props: {
+      works: {
+        current: allWorks
+          .filter((work) => work.status == "current")
+          .map(mapToProps),
+        past: allWorks.filter((work) => work.status == "past").map(mapToProps),
+      },
+    },
+  };
 };
 
 export default Works;
