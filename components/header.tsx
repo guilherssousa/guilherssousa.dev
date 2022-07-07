@@ -48,7 +48,7 @@ const Header = () => {
     };
   }, [headerRef]);
 
-  const isRouteActive = (route: string) => router.pathname === route;
+  const isRouteActive = (route: string) => router.pathname.includes(route);
 
   return (
     <header
