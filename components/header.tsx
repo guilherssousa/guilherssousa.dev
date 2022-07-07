@@ -21,7 +21,11 @@ export const routes = [
   },
 ];
 
-const Header = () => {
+interface Props {
+  toggleMenu: Function;
+}
+
+const Header: React.FC<Props> = ({ toggleMenu }) => {
   const [isVisible, setIsVisible] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -61,7 +65,7 @@ const Header = () => {
       `}
       ref={headerRef}
     >
-      <nav className="flex gap-x-4 md:gap-x-6 font-bold text-lg text-stone-400">
+      <nav className="flex items-center gap-x-4 md:gap-x-6 font-bold text-lg text-stone-400">
         {routes.map((route) => (
           <Link key={route.path} href={route.path} passHref>
             <a
@@ -73,6 +77,27 @@ const Header = () => {
             </a>
           </Link>
         ))}
+        <button
+          type="button"
+          role="button"
+          className="bg-yellow-800 p-2 rounded-md hover:bg-yellow-900  text-yellow-400 hover:text-yellow-500"
+          onClick={() => toggleMenu((s: boolean) => !s)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+            />
+          </svg>
+        </button>
       </nav>
     </header>
   );
