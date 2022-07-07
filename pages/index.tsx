@@ -10,6 +10,8 @@ import Section from "components/section";
 
 import Heading from "components/heading";
 
+import me from "assets/me.jpg";
+
 const Home: NextPage = () => {
   return (
     <Container>
@@ -31,10 +33,12 @@ const Home: NextPage = () => {
         </div>
         <div className="mb-8 w-24 h-24 sm:w-32 sm:h-32 md:w-auto md:h-auto order-1 md:order-2 flex items-center justify-center rounded-full ring-4 ring-orange-400 relative overflow-hidden">
           <Image
-            src="https://github.com/guilherssousa.png"
+            src={me}
             alt="Hi, this is me."
             width={256}
             height={256}
+            placeholder="blur"
+            loading="lazy"
           />
         </div>
       </main>
