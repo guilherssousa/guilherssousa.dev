@@ -10,50 +10,11 @@ import Section from "components/section";
 import WorkCard from "components/work-card";
 import SimpleLink from "components/simple-link";
 
-// const works = {
-//   current: [
-//     {
-//       name: "Correio Anônimo",
-//       imageUrl: "/correio.png",
-//       description:
-//         "Envie mensagens de forma anônima para suas pessoas queridas usando seus nomes de usuário do Twitter.",
-//       link: "https://correioanonimo.com.br",
-//     },
-//     {
-//       name: "Hookpedia",
-//       imageUrl: "/hookpedia.png",
-//       description:
-//         "Um repositório de Hooks do React, feito pela comunidade lusófona.",
-//       link: "https://hookpedia.now.sh",
-//     },
-//     {
-//       name: "Guilherme Sousa",
-//       imageUrl: "/portfolio.png",
-//       description: "Este site que você está acessando!",
-//       link: "https://guilherssousa.dev",
-//     },
-//   ],
-//   past: [
-//     {
-//       name: "Dramaland",
-//       imageUrl: "/dramaland.png",
-//       description:
-//         "Um portal de notícias, resenhas e opinião do mundo da dramaturgia coreana.",
-//       link: "https://dramaland.now.sh",
-//     },
-//     {
-//       name: "p44blo",
-//       imageUrl: "/p44blo.png",
-//       description: "Ruan 'p44blo' Dias é um editor de vídeos de Blumenau/SC.",
-//       link: "https://ruanpdias.com",
-//     },
-//   ],
-// };
-
 interface Props {
   works: {
     current: Work[];
     past: Work[];
+    collaborations: Work[];
   };
 }
 
@@ -72,6 +33,15 @@ const Works: NextPage<Props> = ({ works }) => {
         </p>
 
         <div className="mt-6">
+          <Heading size="small" title="Colaborações" />
+
+          <div className="grid sm:grid-cols-2 mt-6 gap-y-6 gap-x-4">
+            {works.collaborations.map((work) => (
+              <WorkCard key={work.name} {...work} />
+            ))}
+          </div>
+
+          <div className="border-t border-stone-700 my-8"></div>
           <Heading size="small" title="Em manutenção" />
 
           <div className="grid sm:grid-cols-2 mt-6 gap-y-6 gap-x-4">
@@ -80,15 +50,16 @@ const Works: NextPage<Props> = ({ works }) => {
             ))}
           </div>
 
-          <div className="border-t border-stone-700 mt-8 mb-6"></div>
+          <div className="border-t border-stone-700 my-8"></div>
           <Heading size="small" title="Trabalhos antigos" />
+
           <div className="grid sm:grid-cols-2 mt-6 gap-y-6 gap-x-4">
             {works.past.map((work) => (
               <WorkCard key={work.name} {...work} />
             ))}
           </div>
 
-          <div className="border-t border-stone-700 mt-8 mb-6"></div>
+          <div className="border-t border-stone-700 my-8"></div>
           <Heading size="small" title="Open Source" />
 
           <p className="mt-2">
@@ -131,13 +102,16 @@ export const getStaticProps = async () => {
     link: `/works/${work.slug}`,
   });
 
+  function filterAndMapToProp(status: string) {
+    return allWorks.filter((work) => work.status === status).map(mapToProps);
+  }
+
   return {
     props: {
       works: {
-        current: allWorks
-          .filter((work) => work.status == "current")
-          .map(mapToProps),
-        past: allWorks.filter((work) => work.status == "past").map(mapToProps),
+        current: filterAndMapToProp("current"),
+        past: filterAndMapToProp("past"),
+        collaborations: filterAndMapToProp("collaboration"),
       },
     },
   };

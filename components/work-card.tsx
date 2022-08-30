@@ -13,7 +13,7 @@ const WorkCard: React.FC<Props> = ({ name, imageUrl, description, link }) => {
   return (
     <Link href={link} passHref>
       <a>
-        <article className="transition-all hover:brightness-90">
+        <article className="transition-all hover:brightness-95">
           <div className="aspect-video relative rounded-lg overflow-hidden border border-stone-700">
             <Image
               src={imageUrl}
