@@ -4,7 +4,7 @@ const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["github.com", "miro.medium.com"],
+    domains: ["github.com", "miro.medium.com", "i.imgur.com"],
   },
 };
 

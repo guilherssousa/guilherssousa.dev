@@ -9,6 +9,8 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import Container from "components/container";
 import Section from "components/section";
 
+import SimpleLink from "components/simple-link";
+
 interface Params extends ParsedUrlQuery {
   slug: string;
 }
@@ -51,7 +53,7 @@ const Post: NextPage<Props> = ({ post }) => {
           <div className="border-t border-stone-700 mt-6"></div>
         </div>
         <div className="prose md:prose-lg prose-invert">
-          <MDXContent />
+          <MDXContent components={{ SimpleLink }} />
         </div>
       </Section>
     </Container>
