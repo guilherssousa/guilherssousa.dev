@@ -1,5 +1,6 @@
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import { ParsedUrlQuery } from "querystring";
+import { TwitterTweetEmbed } from "react-twitter-embed";
 
 import Head from "next/head";
 
@@ -10,6 +11,7 @@ import Container from "components/container";
 import Section from "components/section";
 
 import SimpleLink from "components/simple-link";
+import Image from "components/image";
 
 interface Params extends ParsedUrlQuery {
   slug: string;
@@ -53,7 +55,7 @@ const Post: NextPage<Props> = ({ post }) => {
           <div className="border-t border-stone-700 mt-6"></div>
         </div>
         <div className="prose md:prose-lg prose-invert">
-          <MDXContent components={{ SimpleLink }} />
+          <MDXContent components={{ SimpleLink, TwitterTweetEmbed, Image }} />
         </div>
       </Section>
     </Container>
