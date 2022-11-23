@@ -1,6 +1,29 @@
 import { type NextRequest } from "next/server";
 import { getNowPlaying } from "lib/spotify";
 
+interface Song {
+  is_playing: boolean;
+  item: {
+    name: string;
+    artists: Artist[];
+    album: Album;
+    external_urls: {
+      spotify: string;
+    };
+  } | null;
+}
+
+interface Artist {
+  name: string;
+}
+
+interface Album {
+  name: string;
+  images: {
+    url: string;
+  }[];
+}
+
 export const config = {
   runtime: "experimental-edge",
 };
@@ -17,7 +40,7 @@ export default async function handler(req: NextRequest) {
     });
   }
 
-  const song = await response.json();
+  const song = (await response.json()) as Song;
 
   if (song.item === null) {
     return new Response(JSON.stringify({ isPlaying: false }), {
@@ -29,10 +52,15 @@ export default async function handler(req: NextRequest) {
   }
 
   const isPlaying = song.is_playing;
+
   const title = song.item.name;
+
   const artist = song.item.artists.map((artist) => artist.name).join(", ");
+
   const album = song.item.album.name;
+
   const albumImageUrl = song.item.album.images[0].url;
+
   const songUrl = song.item.external_urls.spotify;
 
   return new Response(
