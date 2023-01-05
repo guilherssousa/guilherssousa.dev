@@ -50,6 +50,12 @@ Contribuições fazem o ambiente Open Source ficar muito mais interessante! Qual
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
+<!-- SEE ALSO -->
+
+## Veja também
+
+- [svelte.guilherssousa.dev](https://svelte.guilherssousa.dev/)
+
 <!-- CONTACT -->
 
 ## Contato
