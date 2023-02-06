@@ -55,6 +55,7 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 ## Veja também
 
 - [svelte.guilherssousa.dev](https://svelte.guilherssousa.dev/)
+- Also working on a Astro version.
 
 <!-- CONTACT -->
 
