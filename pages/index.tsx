@@ -96,7 +96,7 @@ const Home: NextPage = () => {
             se cria, tudo se copia.
           </p>
 
-          <ul className="mt-4 first-letter:grid grid-cols-2 sm:grid-cols-3 gap-y-2">
+          <ul className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-y-2">
             {Object.entries(people)
               .sort((a, b) => +a[1] - +b[1])
               .map(([person, met]) => (
