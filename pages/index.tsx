@@ -10,6 +10,8 @@ import Section from "components/section";
 
 import Heading from "components/heading";
 
+import people from "data/people.json";
+
 import me from "assets/me.jpg";
 
 const Home: NextPage = () => {
@@ -80,6 +82,40 @@ const Home: NextPage = () => {
             você pode conferir alguns desses posts clicando em &quot;Blog&quot;
             lá em cima! &uarr;
           </p>
+        </Section>
+      </div>
+
+      <div className="mt-16">
+        <Section>
+          <Heading title="Pessoas que eu gostaria de conhecer" />
+          <p>
+            O site do incrível{" "}
+            <SimpleLink href="https://rafa.design">Rafa Conde</SimpleLink> tem
+            uma seção onde ele compartilha as pessoas que ele gostaria de
+            conhecer. Eu achei isso bacana e obviamente copiei ele, afinal, nada
+            se cria, tudo se copia.
+          </p>
+
+          <ul className="mt-4 first-letter:grid grid-cols-2 sm:grid-cols-3 gap-y-2">
+            {Object.entries(people)
+              .sort((a, b) => +a[1] - +b[1])
+              .map(([person, met]) => (
+                <li
+                  key={person}
+                  data-met={met}
+                  className="data-[met=true]:text-red-900 flex gap-x-2 items-baseline"
+                >
+                  <div
+                    className={`border-2 rounded-sm w-4 h-4 inline-block ${
+                      met
+                        ? "border-orange-400 bg-orange-900/20"
+                        : "bg-neutral-800 border-neutral-400"
+                    }`}
+                  ></div>
+                  {person}
+                </li>
+              ))}
+          </ul>
         </Section>
       </div>
     </Container>
