@@ -22,9 +22,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <div class="max-w-screen-md mx-auto">
       <Header />
 
-      <main class="max-w-screen-sm mx-auto px-2 mt-8">
+      <main class="max-w-screen-sm mx-auto px-4 mt-8">
         <article>
-          <h1 class="font-bold text-4xl">{title}</h1>
+          <h1 class="font-bold text-3xl sm:text-4xl">
+            {title}
+          </h1>
           <p class="text-md mt-2 mb-0">{description}</p>
           <div>
             <FormattedDate class="text-sm text-neutral-600" date={pubDate} />
