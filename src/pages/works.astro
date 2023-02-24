@@ -1,0 +1,216 @@
+---
+import Base from "../layouts/Base.astro";
+import BaseHead from "../components/BaseHead.astro";
+import FeaturedWork from "../components/FeaturedWork.astro";
+---
+
+<Base>
+  <head>
+    <BaseHead
+      title={"Works | Guilherme Sousa"}
+      description="Check all my featured works."
+    />
+  </head>
+
+  <div class="mb-6">
+    <h2 class="text-3xl">Featured Works</h2>
+    <p>
+      Here you can check my projects, collaborations, contributions, and more.
+    </p>
+  </div>
+
+  <div class="mb-12">
+    <h3 class="text-2xl">Collaborations</h3>
+    <p class="mb-4">Projects done for clients and companies.</p>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      <FeaturedWork
+        name="Ruan Dias"
+        description="Ruan Dias is a professional video editor from Blumenau, Brazil."
+        src="/assets/ruandias.jpg"
+        href="https://ruanpdias.com"
+      />
+
+      <FeaturedWork
+        name="Nice House"
+        description="Nice House is a entertainment hub with the most talented creators from Brazil."
+        src="/assets/nice-house.jpg"
+        href="https://nicehousebr.com"
+      />
+    </div>
+  </div>
+
+  <div class="mb-12">
+    <h3 class="text-2xl">Open Source</h3>
+
+    <p>Free to contribute content that I believe in.</p>
+
+    <div>
+      <div>
+        <h4 class="text-xl">
+          <a href="https://swr.vercel.app" target="_blank">SWR</a>
+          <span class="text-base font-normal text-neutral-400">2022 - Now</span>
+        </h4>
+        <p>
+          SWR is a React Hooks library for remote data fetching from <a
+            href="https://vercel.com">Vercel</a
+          >. It handles caching, revalidation, focus tracking, refetching on
+          interval, and more. I contribute by translating <a
+            href="https://swr.vercel.app/pt-BR"
+            target="_blank">documentation to Brazilian Portuguese</a
+          > and incrementing the translation experience for new contributors.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-xl">
+          <a href="https://github.com/Lioness100/rspell" target="_blank"
+            >rspell</a
+          >
+          <span class="text-base font-normal text-neutral-400">2023 - Now</span>
+        </h4>
+        <p>
+          <code>rspell</code> is a CLI tool that leverages cspell to find all the
+          typos in your project. I sporadically contribute to the project as a developer,
+          instead of documenting.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-xl">
+          <a href="https://electronjs.org" target="_blank">Electron</a>
+          <span class="text-base font-normal text-neutral-400">2022</span>
+        </h4>
+        <p>
+          Electron is a framework for building cross-platform desktop apps with
+          JavaScript, HTML, and CSS. I contributed by translating <a
+            href="https://www.electronjs.org/pt"
+            target="_blank">documentation to Brazilian Portuguese.</a
+          >
+        </p>
+      </div>
+      <div>
+        <h4 class="text-xl">
+          <a href="https://pnpm.io/" target="_blank">pnpm</a>
+          <span class="text-base font-normal text-neutral-400">2022</span>
+        </h4>
+        <p>
+          pnpm is a fast, disk space efficient alternative to npm and yarn. I
+          contributed by translating <a
+            href="https://pnpm.io/pt"
+            target="_blank">documentation to Brazilian Portuguese.</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-12">
+    <h3 class="text-2xl">Other Projects</h3>
+
+    <p>
+      These are my side projects, made on my spare time to validate ideas and
+      learn new things.
+    </p>
+
+    <div>
+      <div>
+        <h4 class="text-xl">
+          <a
+            href="https://github.com/guilherssousa/flow-launcher-vercel-plugin"
+            target="_blank">flow-launcher-vercel-plugin</a
+          >
+          <span class="text-base font-normal text-neutral-400">2023</span>
+        </h4>
+        <p>
+          A plugin for <a
+            href="https://flow-launcher.github.io/"
+            target="_blank">Flow Launcher</a
+          > that allows you to interact with your projects on Vercel.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xl">
+          <a href="https://as-bump.vercel.app">[adult swim] bumper generator</a>
+          <span class="text-base font-normal text-neutral-400">2023</span>
+        </h4>
+        <p>Create your own [adult swim] bumpers with this website.</p>
+      </div>
+
+      <div>
+        <h4 class="text-xl">
+          <a href="#">Pokéco</a>
+          <span class="text-base font-normal text-neutral-400"
+            >2022 - 2023, WIP</span
+          >
+        </h4>
+        <p>
+          A private project that I'm working on. It's a Desktop app that helps
+          you keep track of your Pokédex progress.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xl">
+          <a
+            href="https://github.com/guilherssousa/dissecting-create-vite"
+            target="_blank">Dissecting create-vite</a
+          >
+          <span class="text-base font-normal text-neutral-400">2022</span>
+        </h4>
+        <p>
+          A blogpost + repository that explains how <a
+            href="https://vitejs.dev/"
+            target="_blank">Vite's CLI</a
+          >
+          <a href="https://npmjs.com/package/create-vite" target="_blank"
+            ><code>create-vite</code></a
+          > code works.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xl">
+          <a href="https://github.com/guilherssousa/mew-machine" target="_blank"
+            >Mew Machine</a
+          >
+          <span class="text-base font-normal text-neutral-400">2022</span>
+        </h4>
+        <p>
+          A Python recreation of the Mew Machine software. It adds a nearly
+          legit YOSHIRA Mew to your save file when you have a open slot in your
+          party.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xl">
+          <a href="https://hookpedia.vercel.app" target="_blank">Hookpedia</a>
+          <span class="text-base font-normal text-neutral-400"
+            >2022, discontinued</span
+          >
+        </h4>
+        <p>
+          A website that allows you to search for React hooks and see their
+          documentation. It is essentially a Brazilian Portuguese version of <a
+            href="https://usehooks.com/"
+            target="_blank">useHooks</a
+          >.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xl">
+          <a href="#">Correio Anônimo</a>
+          <span class="text-base font-normal text-neutral-400"
+            >2021 - 2022, discontinued</span
+          >
+        </h4>
+      </div>
+      <p>
+        Correio Anônimo is a web app that allows you to send anonymous mails to
+        anyone. It was made during my last year of high school and got 10k+
+        users registered and more than 30k mails sent.
+      </p>
+    </div>
+  </div>
+</Base>

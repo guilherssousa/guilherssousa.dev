@@ -1,0 +1,21 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<header class="flex mt-12 items-center px-4 flex-wrap justify-between">
+  <h1 class="shrink-0">
+    {SITE_TITLE}
+  </h1>
+  <nav class="flex gap-x-4">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/blog">Blog</HeaderLink>
+    <HeaderLink href="/works">Works</HeaderLink>
+    <HeaderLink href="https://twitter.com/krteazy" target="_blank">
+      Twitter
+    </HeaderLink>
+    <HeaderLink href="https://github.com/guilherssousa" target="_blank">
+      GitHub
+    </HeaderLink>
+  </nav>
+</header>

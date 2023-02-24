@@ -1,0 +1,64 @@
+---
+import { differenceInMilliseconds } from "date-fns";
+
+import Base from "../../layouts/Base.astro";
+import { CollectionEntry, getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const sortFunction = (
+  articleA: CollectionEntry<"blog">,
+  articleB: CollectionEntry<"blog">
+) => {
+  return differenceInMilliseconds(articleB.data.pubDate, articleA.data.pubDate);
+};
+
+const sortedPosts = (await getCollection("blog")).sort(sortFunction);
+
+const yearsPosts = sortedPosts.reduce(
+  (acc: Record<number, CollectionEntry<"blog">[]>, curr) => {
+    const year = new Date(curr.data.pubDate).getFullYear();
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+    acc[year].push(curr);
+    return acc;
+  },
+  {}
+);
+---
+
+<Base>
+  <section>
+    <div class="mb-6">
+      <h2 class="text-3xl">Blog</h2>
+      <p>
+        These are posts I wrote about my personal projects, journey, insights,
+        opinions, and more. If you are interested on more technical and
+        well-crafted posts, you may want to take a look at my
+        <a href="https://medium.com/@guilherssousa" target="_blank">Medium</a> page.
+      </p>
+    </div>
+    <ul>
+      {
+        Object.entries(yearsPosts)
+          .sort(([a], [b]) => parseInt(b, 10) - parseInt(a, 10))
+          .map(([year, posts]) => (
+            <div class="mb-6">
+              <div class="text-white font-bold text-2xl mb-4">{year}</div>
+              {posts.map((post) => (
+                <li class="hover:brightness-200 transition-[filter] mb-2 ml-8">
+                  <a
+                    href={`/blog/${post.slug}/`}
+                    class="block w-fit border-0 text-bold text-xl link font-bold text-white"
+                  >
+                    {post.data.title}
+                  </a>
+                  <FormattedDate date={post.data.pubDate} />
+                </li>
+              ))}
+            </div>
+          ))
+      }
+    </ul>
+  </section>
+</Base>
