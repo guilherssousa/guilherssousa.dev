@@ -10,3 +10,4 @@ This website was built using [Astro](https://astro.build), [Svelte](https://svel
 
 - The legacy Next.js version is available at branch `nextjs`.
 - I also have another blog written in Svelte, which is available at [svelte.guilherssousa.dev](https://svelte.guilherssousa.dev).
+
