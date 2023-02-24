@@ -1,0 +1,51 @@
+---
+import Base from "../layouts/Base.astro";
+
+const bio = `
+  Guilherme Sousa is a Brazilian developer. Currently working at Mais Esports,
+  He extends coding beyond his work, as he contributes to open source project,
+  with a particular focus on translating documentation to Brazilian
+  Portuguese. He also enjoys hacking old Pokémon games as a hobby, which
+  allows him to explore the intricacies of these classic games and
+  understanding computer science.
+`;
+---
+
+<Base>
+  <h2 class="text-4xl mb-6">Hi. 👋</h2>
+
+  <p>
+    I like to build things. I'm a software developer, a Pokémon hacker, a gamer,
+    a writer, a reader, a friend, a human being. Currently I work at <a
+      href="https://maisesports.com.br/"
+      target="_blank">Mais Esports</a
+    > as Fullstack developer, also contributing to open source projects and translating
+    documentation to Brazilian Portuguese.
+  </p>
+
+  <p>
+    You may find blog posts that I wrote on my <a
+      href="https://medium.com/@guilherssousa"
+      target="_blank">Medium</a
+    >
+    if you want to read Portuguese content. On my <a href="/blog">Blog</a> tab, I
+    more about my personal projects, journey, insights, opinions, and more.
+  </p>
+
+  <p>
+    And, if you're interested in seeing my projects, then you can check them out
+    on my <a href="/projects">Projects</a> tab.
+  </p>
+
+  <h3 class="text-3xl mb-2 mt-6">Fancy copy for fancy people!</h3>
+
+  <p class="mb-4">
+    So, if you're here to copy my bio, here it is. I hope you enjoy it!
+  </p>
+
+  <blockquote
+    class="border-l-2 border-neutral-700 text-neutral-500 pl-3 py-1 mb-4"
+  >
+    {bio}
+  </blockquote>
+</Base>
