@@ -1,5 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import { Icon } from "astro-icon";
 import { SITE_TITLE } from "../consts";
 ---
 
@@ -7,15 +8,15 @@ import { SITE_TITLE } from "../consts";
   <h1 class="shrink-0">
     {SITE_TITLE}
   </h1>
-  <nav class="flex gap-x-4">
+  <nav class="flex gap-x-4 items-center">
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink href="/blog">Blog</HeaderLink>
     <HeaderLink href="/works">Works</HeaderLink>
     <HeaderLink href="https://twitter.com/krteazy" target="_blank">
-      Twitter
+      <Icon name="ph:twitter-logo" class="w-6 h-6" />
     </HeaderLink>
     <HeaderLink href="https://github.com/guilherssousa" target="_blank">
-      GitHub
+      <Icon name="ph:github-logo" class="w-6 h-6" />
     </HeaderLink>
   </nav>
 </header>
