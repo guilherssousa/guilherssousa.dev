@@ -40,5 +40,5 @@ a:not(.link) {
 }
 
 .gradient {
-  @apply from-black via-black to-orange-900/40 bg-black;
+  @apply from-black via-green-900/10 to-green-900/40 bg-black;
 }
