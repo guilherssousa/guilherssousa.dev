@@ -5,7 +5,17 @@ description: A special post to record detailed infos and lessons about my open s
 
 ## 📅 August 2023
 
-### A nice reply from Dimitri
+### vercel/swr-site
+
+#### On August 22, Pull Request #535 [Updata Brazilian Portuguese contents](https://github.com/vercel/swr-site/pull/535) was accepted and merged into the main branch.
+
+As the title suggests, I translated new content to Portuguese on the website.
+This is what I contribute on the most, since I'm a native Portuguese speaker.
+Not first time, but the first one I decided to record here.
+
+### shuding/nextra
+
+#### A nice reply from Dimitri
 
 I sent an email to [Dimitri Postolov](https://github.com/B2o5T) (The Guild)
 asking some questions about the changeset commit chores on Nextra.
@@ -15,9 +25,6 @@ the library used on nextra's versioning.
 Altough sending an email to someone asking work stuff seems a little bit
 weird for me (_gen Z thing_), he gave me a boost to learn something new and
 continue contributing. Thanks Dimitri :)
-
-### shuding/nextra
-
 #### On August 15, Pull Request #2171 [Ensure first depth 1 heading as title](https://github.com/shuding/nextra/pull/2171) was accepted and merged into the main branch.
 
 This solves a problem that when users inserts multiple `h1` (`#`)
