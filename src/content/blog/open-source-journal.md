@@ -64,6 +64,20 @@ You can customize the icon, name and even the phone background image! I fixed a 
 problem that was running on wide screen displays: When you would zoom in, all of the
 phone container would break and the items would spare out of the grid.
 
+### shuding/nextra
+
+#### On July 16, VishDroid-dev issued an Out of Memory problem on [Issue #2077](https://github.com/shuding/nextra/issues/2077).
+
+I'm genuinely proud of what I did on this issue: I sent a big message explaining why and
+how the error happened, and how he could fix it without having to depend on maintainers.
+
+The User project featured 2K+ characters long strings that were breaking Flexsearch's
+indexing and searching, causing the website to stop working and triggering a death screen
+shortly after. I kindly made him aware of the problem and proposed solutions to fix the
+problem.
+
+Dimitri even recognized the deep dive I did! That is awesome :)
+
 ## 📅 March 2023
 
 ### daltonmenezes/interprocess
