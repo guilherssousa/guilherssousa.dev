@@ -3,6 +3,17 @@ title: ⭐ Open Source Journal
 description: A special post to record detailed infos and lessons about my open source experience.
 ---
 
+## 📅 September 2023
+
+### shuding/nextra
+
+#### On September 4, Pull Request #2253 [create new docs page about `useConfig`](https://github.com/shuding/nextra/pull/2253) was accepted and merged into the main branch.
+
+As mentioned in [Issue #2241 by stennarasan](https://github.com/shuding/nextra/issues/2241), one of the links in the docs was
+redirecting to an inexistent page. I wrote the new page about the return values of the `useConfig` hook, fixing the 404 errors.
+
+#### On 
+
 ## 📅 August 2023
 
 ### vercel/swr-site
