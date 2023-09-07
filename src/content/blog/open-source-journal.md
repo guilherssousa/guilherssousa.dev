@@ -12,8 +12,6 @@ description: A special post to record detailed infos and lessons about my open s
 As mentioned in [Issue #2241 by stennarasan](https://github.com/shuding/nextra/issues/2241), one of the links in the docs was
 redirecting to an inexistent page. I wrote the new page about the return values of the `useConfig` hook, fixing the 404 errors.
 
-#### On 
-
 ## 📅 August 2023
 
 ### vercel/swr-site
@@ -36,6 +34,7 @@ the library used on nextra's versioning.
 Altough sending an email to someone asking work stuff seems a little bit
 weird for me (_gen Z thing_), he gave me a boost to learn something new and
 continue contributing. Thanks Dimitri :)
+
 #### On August 15, Pull Request #2171 [Ensure first depth 1 heading as title](https://github.com/shuding/nextra/pull/2171) was accepted and merged into the main branch.
 
 This solves a problem that when users inserts multiple `h1` (`#`)
@@ -108,7 +107,6 @@ Although some people think installing new packages on open source projects it's 
 idea, I thought about how the path conflicts would be hard to maintain if a custom
 solution was made only for this. So, based on its performance metrics and bundle size,
 adding this package was a no-brainer solution. And it works! ✨
-
 
 ## 📅 February 2023
 
