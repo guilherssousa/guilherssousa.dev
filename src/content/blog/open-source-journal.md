@@ -5,6 +5,12 @@ description: A special post to record detailed infos and lessons about my open s
 
 ## 📅 September 2023
 
+### Panda3DS-emu/panda3ds-dot-com
+
+#### On September 23, Pull Request #1 [Small improvements](https://github.com/Panda3DS-emu/panda3ds-dot-com/pull/1) was accepted and merged into the main branch.
+
+This is the very first time I contributed on the Nintendo emulation comunnity! I mean, it wasn't on the emulation software itself, but I managed to tweak some things that were not correct on their first release for their website. I was the very first one to submit a PR, cool :)
+
 ### shuding/nextra
 
 #### On September 4, Pull Request #2253 [create new docs page about `useConfig`](https://github.com/shuding/nextra/pull/2253) was accepted and merged into the main branch.
