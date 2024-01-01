@@ -1,0 +1,16 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav class="max-w-screen-md mx-auto px-4 py-6 flex items-center justify-between">
+		<a href="/">
+			<img src="https://github.com/guilherssousa.png" alt="This is me!" height="48" width="48" class="rounded-full" />
+		</a>
+		<div class="flex items-center gap-x-4">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+	</nav>
+</header>

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+a[target="_blank"] {
+  @apply font-bold;
+}
