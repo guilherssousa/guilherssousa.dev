@@ -1,6 +1,8 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const { title, description } = Astro.props;
 ---
@@ -17,5 +19,6 @@ const { title, description } = Astro.props;
 				<slot />
 			</article>
 		</main>
+		<Footer />
 	</body>
 </html>
