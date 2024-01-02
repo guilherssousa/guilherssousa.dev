@@ -2,6 +2,6 @@
 @tailwind utilities;
 @tailwind components;
 
-a[target="_blank"] {
+a[target="_blank"].outside {
   @apply font-bold;
 }
