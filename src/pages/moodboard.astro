@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+
+import MainLayout from '../layouts/Main.astro';
+
+import { SITE_TITLE } from '../consts';
+---
+
+<MainLayout title={`Moodboard - ${SITE_TITLE}`} description={"Meet me and the things I enjoy."}>
+	<h1>
+		Moodboard
+	</h1>
+
+	<p>
+		Essentially, this is a collection of things I enjoy. 
+	</p>
+
+	<div class="not-prose grid grid-cols-2 sm:grid-cols-3 gap-4">
+		<div class="item">
+			<Image height="192" width="192" src="/moodboard/f1-car.jpg" class="aspect-square rounded-md object-cover" alt="An Aston Martin F1 car." />
+			<span class="item__descriptor">Formula 1 (Photo: F1/Liberty Media)</span>
+		</div>
+		<div class="item">
+			<Image height="192" width="192" src="/moodboard/cameras.jpg" class="aspect-square rounded-md object-cover" alt="A Fujifilm camera." />
+			<span class="item__descriptor">Old cameras. (Photo: Pinterest)</span>
+		</div>
+		<div class="item">
+			<Image height="192" width="192" src="/moodboard/flower.jpg" class="aspect-square rounded-md object-cover" alt="A floral wallpaper" />
+			<span class="item__descriptor">Floral wallpapers! (Photo: Pinterest)</span>
+		</div>
+		<div class="item">
+			<Image height="192" width="192" src="/moodboard/weird-cat.jpg" class="aspect-square rounded-md object-cover" alt="A weird-looking cat." />
+			<span class="item__descriptor">These weird-looking cats (Photo: Pinterest)</span>
+		</div>
+		<div class="item">
+			<Image height="192" width="192" src="/moodboard/cover.jpg" class="aspect-square rounded-md object-cover" alt="A custom phone case!" />
+			<span class="item__descriptor">Custom phone cases (Photo: Pinterest)</span>
+		</div>
+		<div class="item">
+			<Image height="192" width="192" src="/moodboard/consoles.jpg" class="aspect-square rounded-md object-cover" alt="Retro gaming consoles." />
+			<span class="item__descriptor">Retro gaming consoles. (Photo: Pinterest)</span>
+		</div>
+	</div>
+</MainLayout>
