@@ -1,12 +1,27 @@
-<footer class="max-w-screen-md mx-auto px-4 pt-16 pb-8 flex items-center justify-between text-neutral-400">
-	<span>talk with me:</span>
+---
+import {Github, Linkedin, Gitlab} from '@lucide/astro';
+---
 
-	<ul class="flex gap-x-4 items-baseline">
-	  <li>
-			<a class="underline" target="_blank" href="https://github.com/guilherssousa">GitHub</a>
-		</li>
-	  <li>
-			<a class="underline" target="_blank" href="https://www.linkedin.com/in/guilhermedasilvasousa/">LinkedIn</a>
-		</li>
-	</ul>
-</footer>
+<div>
+	<footer class="max-w-screen-md mx-auto px-4 mt-8 py-12 flex items-center justify-between text-neutral-200">
+		<strong>Talk with me!</strong>
+
+		<ul class="flex gap-x-4 items-baseline">
+			<li>
+				<a class="underline" target="_blank" href="https://github.com/guilherssousa">
+					<Github/>
+				</a>
+			</li>
+			<li>
+				<a class="underline" target="_blank" href="https://gitlab.com/guilherssousa">
+					<Gitlab/>
+				</a>
+			</li>
+			<li>
+				<a class="underline" target="_blank" href="https://www.linkedin.com/in/guilhermedasilvasousa/">
+					<Linkedin/>
+				</a>
+			</li>
+		</ul>
+	</footer>
+</div>

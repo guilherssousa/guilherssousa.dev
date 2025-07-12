@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 const typography = require("@tailwindcss/typography");
 
 /** @type {import('tailwindcss').Config} */
@@ -7,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Mulish", "sans-serif"],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
     },
   },
