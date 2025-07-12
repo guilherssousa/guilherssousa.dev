@@ -36,7 +36,7 @@
 
     "@astrojs/mdx": ["@astrojs/mdx@2.3.1", "", { "dependencies": { "@astrojs/markdown-remark": "5.1.0", "@mdx-js/mdx": "^3.0.0", "acorn": "^8.11.2", "es-module-lexer": "^1.4.1", "estree-util-visit": "^2.0.0", "github-slugger": "^2.0.0", "gray-matter": "^4.0.3", "hast-util-to-html": "^9.0.0", "kleur": "^4.1.4", "rehype-raw": "^7.0.0", "remark-gfm": "^4.0.0", "remark-smartypants": "^2.0.0", "source-map": "^0.7.4", "unist-util-visit": "^5.0.0", "vfile": "^6.0.1" }, "peerDependencies": { "astro": "^4.0.0" } }, "sha512-BOQFKD2Pi9cRntNQJlpF2fh4xV8doNpmVy9NKI95r4jsitrY4X5aTOhAowi+fkQgP/zW1A4HwCyQ6Pdam6z8zQ=="],
 
-    "@astrojs/prism": ["@astrojs/prism@3.1.0", "", { "dependencies": { "prismjs": "^1.29.0" } }, "sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw=="],
+    "@astrojs/prism": ["@astrojs/prism@3.3.0", "", { "dependencies": { "prismjs": "^1.30.0" } }, "sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ=="],
 
     "@astrojs/rss": ["@astrojs/rss@4.0.12", "", { "dependencies": { "fast-xml-parser": "^5.2.0", "kleur": "^4.1.5" } }, "sha512-O5yyxHuDVb6DQ6VLOrbUVFSm+NpObulPxjs6XT9q3tC+RoKbN4HXMZLpv0LvXd1qdAjzVgJ1NFD+zKHJNDXikw=="],
 
@@ -1221,6 +1221,8 @@
     "yaml-language-server/yaml": ["yaml@2.2.2", "", {}, "sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA=="],
 
     "@isaacs/cliui/string-width/emoji-regex": ["emoji-regex@9.2.2", "", {}, "sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg=="],
+
+    "astro/@astrojs/markdown-remark/@astrojs/prism": ["@astrojs/prism@3.1.0", "", { "dependencies": { "prismjs": "^1.29.0" } }, "sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw=="],
 
     "astro/@astrojs/markdown-remark/remark-smartypants": ["remark-smartypants@3.0.2", "", { "dependencies": { "retext": "^9.0.0", "retext-smartypants": "^6.0.0", "unified": "^11.0.4", "unist-util-visit": "^5.0.0" } }, "sha512-ILTWeOriIluwEvPjv67v7Blgrcx+LZOkAUVtKI3putuhlZm84FnqDORNXPPm+HY3NdZOMhyDwZ1E+eZB/Df5dA=="],
 
