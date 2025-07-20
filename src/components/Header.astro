@@ -4,10 +4,11 @@ import HeaderLink from './HeaderLink.astro';
 
 <header>
 	<nav class="max-w-screen-md mx-auto px-4 py-6 flex items-center justify-between dark:text-white">
-		<a href="/" class="font-bold text-xl">
+		<div class="size-8 sm:hidden"></div>
+		<a href="/" class="font-bold text-lg sm:text-xl">
 			Guilherme Sousa
 		</a>
-		<div class="flex items-center gap-x-4">
+		<div class="flex items-center text-sm sm:text-base gap-x-4">
 			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
 			<HeaderLink href="/work">Work</HeaderLink>
 		</div>
