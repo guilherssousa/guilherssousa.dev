@@ -12,10 +12,10 @@ const { title, description } = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body class="bg-white dark:bg-[#241f31] dark:text-white">
+	<body class="bg-amber-50 dark:bg-emerald-950 dark:text-white">
 		<Header />
 		<main class="max-w-screen-sm mx-auto px-4 antialised">
-			<article class="prose prose-purple w-full dark:prose-invert prose-a:no-underline">
+			<article class="prose prose-emerald dark:prose-yellow w-full dark:prose-invert prose-a:no-underline">
 				<slot />
 			</article>
 		</main>
