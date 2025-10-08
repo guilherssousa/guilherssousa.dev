@@ -1,32 +1,33 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
-import Main from '../../layouts/Main.astro';
+import Main from '@/layouts/Main.astro';
+
+import { zenblog } from '@/lib/blog';
+
+import type { Post } from 'zenblog/types'
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
+	const posts = await zenblog.posts.list();
+	return posts.data.map((post) => ({
 		params: { slug: post.slug },
 		props: post,
 	}));
 }
-type Props = CollectionEntry<'blog'>;
+type Props = Post;
 
-const post = Astro.props;
-const { Content } = await post.render();
+const postInfo = Astro.props;
+
+const { data: post } = await zenblog.posts.get({ slug: postInfo.slug });
 ---
 
-<Main {...post.data}>
+<Main {...post}>
 	<div>
-		<h1>{post.data.title}</h1>
-		<p>{post.data.description}</p>
+		<h1>{post.title}</h1>
+		<p>{post.excerpt}</p>
 
 		<span>
-		Posted on {new Date(post.data.pubDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+		Posted on {new Date(post.published_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
 		</span>
-
-		<hr>
 	</div>
-	
 
-	<Content />
+	<div set:html={post.html_content}></div>
 </Main>

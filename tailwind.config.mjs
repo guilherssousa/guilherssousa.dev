@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Be Vietnam Pro", ...defaultTheme.fontFamily.sans],
       },
     },
   },

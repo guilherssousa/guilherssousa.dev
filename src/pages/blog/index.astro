@@ -1,37 +1,35 @@
 ---
 import { getCollection } from 'astro:content';
 
-import MainLayout from '../../layouts/Main.astro';
+import MainLayout from '@/layouts/Main.astro';
 
-import FormattedDate from '../../components/FormattedDate.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
 
-import { SITE_TITLE } from '../../consts';
+import { SITE_TITLE } from '@/consts';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+import { zenblog } from '@/lib/blog'
+
+const posts = await zenblog.posts.list();
 ---
 
 <MainLayout title={`Blog Posts - ${SITE_TITLE}`} description={"Read my thoughts."}>
 	<h1>
-		My Thoughts
+		Blog
 	</h1>
 
 	<p>
-		If you came here to see some cool spicy tech opinions, you might want
-		to check my <a href="https://dev.to/guilherssousa" target="_blank">dev.to</a>
-		account. Here you'll find personal posts about experience, some cool
-		ideas I had and needed to write them down, and some other stuff.
+		As you might have noticed, I actually write my blog posts in Brazilian Portuguese
+		and I'm not really interested in translating them in the near future.
 	</p>
 
 	<div class="not-prose">
 		{
-			posts.map((post) => (
+			posts.data.map((post) => (
 				<a href={`/blog/${post.slug}/`} class="mb-4 block">
 					<article>
-						<h2 class="text-lg font-semibold">{post.data.title}</h2>
+						<h2 class="text-lg font-semibold">{post.title}</h2>
 						<p>
-							<FormattedDate date={post.data.pubDate} />
+							<FormattedDate date={new Date(post.published_at)} />
 						</p>
 					</article>
 				</a>
