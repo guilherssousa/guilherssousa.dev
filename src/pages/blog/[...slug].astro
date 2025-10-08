@@ -19,7 +19,7 @@ const postInfo = Astro.props;
 const { data: post } = await zenblog.posts.get({ slug: postInfo.slug });
 ---
 
-<Main {...post}>
+<Main title={post.title} description={post.excerpt}>
 	<div>
 		<h1>{post.title}</h1>
 		<p>{post.excerpt}</p>
