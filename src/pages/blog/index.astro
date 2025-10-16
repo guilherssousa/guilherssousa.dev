@@ -22,15 +22,24 @@ const posts = await zenblog.posts.list();
 		and I'm not really interested in translating them in the near future.
 	</p>
 
-	<div class="not-prose">
+	<div class="not-prose grid grid-cols-2 gap-x-3 gap-y-4">
 		{
 			posts.data.map((post) => (
 				<a href={`/blog/${post.slug}/`} class="mb-4 block">
 					<article>
-						<h2 class="text-lg font-semibold">{post.title}</h2>
-						<p>
-							<FormattedDate date={new Date(post.published_at)} />
+						<img 
+							src={post.cover_image} 
+							alt={`Capa de ${post.title}`} 
+							class="rounded-md object-fill aspect-video w-full"
+						/>
+						<h2 class="mt-4 text-xl font-semibold text-neutral-900 dark:text-neutral-100">{post.title}</h2>
+						<p class="text-neutral-700 dark:text-neutral-300 text-base">
+							{post.excerpt}
 						</p>
+
+						<span class="text-neutral-600 dark:text-neutral-400 text-xs">
+							<FormattedDate date={new Date(post.published_at)} />
+						</span>
 					</article>
 				</a>
 			))

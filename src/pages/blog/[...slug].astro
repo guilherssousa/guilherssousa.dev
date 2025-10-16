@@ -19,12 +19,13 @@ const postInfo = Astro.props;
 const { data: post } = await zenblog.posts.get({ slug: postInfo.slug });
 ---
 
-<Main title={post.title} description={post.excerpt}>
-	<div>
+<Main title={post.title} description={post.excerpt} image={post.cover_image}>
+	<div class="prose-h1:my-0">
+		<img src={post.cover_image} alt={post.title} class="aspect-video object-fill rounded-lg shadow-xl" />
 		<h1>{post.title}</h1>
-		<p>{post.excerpt}</p>
+		<div class="mt-2">{post.excerpt}</div>
 
-		<span>
+		<span class="text-sm dark:text-neutral-400 text-neutral-600">
 		Posted on {new Date(post.published_at).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
 		</span>
 	</div>
