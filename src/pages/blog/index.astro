@@ -30,7 +30,7 @@ const posts = await zenblog.posts.list();
 						<img 
 							src={post.cover_image} 
 							alt={`Capa de ${post.title}`} 
-							class="rounded-md object-fill aspect-video w-full"
+							class="rounded-md object-contain aspect-video w-full"
 						/>
 						<h2 class="mt-4 text-xl font-semibold text-neutral-900 dark:text-neutral-100">{post.title}</h2>
 						<p class="text-neutral-700 dark:text-neutral-300 text-base">
