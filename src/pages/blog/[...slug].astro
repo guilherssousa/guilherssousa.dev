@@ -21,7 +21,7 @@ const { data: post } = await zenblog.posts.get({ slug: postInfo.slug });
 
 <Main title={post.title} description={post.excerpt} image={post.cover_image}>
 	<div class="prose-h1:my-0">
-		<img src={post.cover_image} alt={post.title} class="aspect-video object-fill rounded-lg shadow-xl" />
+		<img src={post.cover_image} alt={post.title} class="w-full aspect-video object-cover rounded-lg shadow-xl" />
 		<h1>{post.title}</h1>
 		<div class="mt-2">{post.excerpt}</div>
 
