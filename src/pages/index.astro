@@ -1,57 +1,78 @@
 ---
 import Main from "../layouts/Main.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <Main title={SITE_TITLE} description={SITE_DESCRIPTION}>
-	<div class="sm:flex gap-x-6">
-		<div class="relative size-48 sm:size-64 shrink-0 mx-auto">
-			<div class="bg-neutral-200 rounded-md h-full w-full transform -rotate-[5deg] absolute top-0 left-0 z-10" />
-			<img fetchpriority="high" src="https://github.com/guilherssousa.png" alt="It's me!" class="rounded-md h-full w-full transform -rotate-[3deg] absolute top-0 left-0 z-30 not-prose" />
-		</div>
-		<div class="mt-8 sm:mt-0">
-			<p>
-				Hi. I'm <strong>Gui Sousa</strong> and I do nice things with code. 
-				I'm currently working on <a href="https://ltafantasy.com/" target="_blank">LTA Fantasy</a>
-				at <strong>Fracassi Tech</strong> and a <a href="https://techinrio.com" target="_blank">Tech in Rio</a>
-				community member.
-			</p>
+  <h2 class="font-bold font-serif text-6xl not-prose leading-none mb-4">
+    Still figuring things out here.
+  </h2>
 
-			<p>
-				I started coding in <strong>2018</strong> and working as a developer in <strong>2020</strong>, interested in 
-				small things, broadcast, Pokémon and my dotfiles. 
-			</p>
-		</div>
-	</div>
+  <p>
+    Hi. I'm <strong>Guilherme Sousa</strong> and I do nice things with code. I'm currently
+    working as a Software Engineer at
+    <a href="https://github.com/riftix" class="outside" target="_blank"
+      >Riftix</a
+    >.
+  </p>
 
-	<div class="mt-4">
-		<h2>Highlighted</h3>
+  <div class="mt-4">
+    <h2>Highlighted Works</h2>
 
-		<div>
-				<h3>2025</h3>
+    <div>
+      <h3>2026</h3>
 
-				<p>
-					I joined <strong>Fracassi Tech</strong> in April 2025 to work on <a href="https://lolesports.com/news/lta-fantasy-is-here">LTA Fantasy</a>,
-					where players can manage their own fantasy teams, draft their favorite players and compete with friends
-					in partnership with <strong>Riot Games</strong>.
-				</p>
-		</div>
+      <p>
+        Following the end of LTA, we launched their regional fantasy successors,
+        <a href="https://cblol.gg" class="outside" target="_blank"
+          >CBLOL Fantasy</a
+        > and <a href="https://lcsofficial.gg" class="outside" target="_blank"
+          >LCS Fantasy</a
+        >.
+      </p>
+    </div>
 
-		<div>
-			<h3>2021</h3>
+    <div>
+      <h3>2025</h3>
 
-			<p>
-					During my time at <strong>Mais Esports</strong>, I worked on integrating and automating Esports tournament coverage, 
-				data insights for viewers and tipsters, specialized SEO pages, content formats like AMP WebStories
-				and contributed in special editorial content, data analytics, assets and translation.
-			</p>
+      <p>
+        I joined <strong>Fracassi Tech</strong> (now <a
+          href="https://riftix.com"
+          class="outside"
+          target="_blank">Riftix</a
+        >) in April 2025 to work on <a
+          href="https://lolesports.com/news/lta-fantasy-is-here"
+          class="outside"
+          target="_blank">LTA Fantasy</a
+        >, where players can manage their own fantasy teams, draft their
+        favorite players and compete with friends in partnership with <strong
+          >Riot Games</strong
+        >.
+      </p>
+    </div>
 
-				<p>
-					My favorite projects during this time were the <strong>Transfers page</strong>, 
-					<strong>2023 website redesign</strong>,
-					<strong>Worlds 2024 special coverage bar</strong>
-					and a <a href="https://maisesports.com.br/especiais/matilha-ontem-e-sempre-titan-lol/">farewell letter.</a>
-				</p>
-		</div>
-	</div>
+    <div>
+      <h3>2021</h3>
+
+      <p>
+        During my time at <strong>Mais Esports</strong>, I worked on integrating
+        and automating Esports tournament coverage, data insights for viewers
+        and tipsters, specialized SEO pages, content formats like AMP WebStories
+        and contributed in special editorial content, data analytics, assets and
+        translation.
+      </p>
+
+      <p>
+        My favorite projects during this time were the <strong
+          >Transfers page</strong
+        >,
+        <strong>2023 website redesign</strong>,
+        <strong>Worlds 2024 special coverage bar</strong>
+        and a <a
+          href="https://maisesports.com.br/especiais/matilha-ontem-e-sempre-titan-lol/"
+          >farewell letter.</a
+        >
+      </p>
+    </div>
+  </div>
 </Main>

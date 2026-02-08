@@ -1,16 +1,17 @@
 ---
-import HeaderLink from './HeaderLink.astro';
+import HeaderLink from "./HeaderLink.astro";
 ---
 
-<header>
-	<nav class="max-w-screen-md mx-auto px-4 py-6 flex flex-col items-center justify-between dark:text-white mb-2">
-		{/*<div class="size-8 sm:hidden"></div>*/}
-		<a href="/" class="font-bold text-lg sm:text-xl">
-			Guilherme Sousa
-		</a>
-		<div class="flex items-center text-neutral-600 dark:text-neutral-300 text-sm sm:text-base gap-x-4">
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/work">Work</HeaderLink>
-		</div>
-	</nav>
+<header class="w-full flex-1">
+  <nav class="py-2 px-4 flex items-center justify-between md:block">
+    {/*<div class="size-8 sm:hidden"></div>*/}
+    <a href="/" class="font-bold text-lg sm:text-xl font-serif">
+      Guilherme Sousa
+    </a>
+    <div class="flex md:flex-col text-sm sm:text-base gap-x-2 gap-y-2 md:mt-4">
+      <HeaderLink href="/">About</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/work">Work</HeaderLink>
+    </div>
+  </nav>
 </header>

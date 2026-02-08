@@ -1,48 +1,52 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-import MainLayout from '@/layouts/Main.astro';
+import MainLayout from "@/layouts/Main.astro";
 
-import FormattedDate from '@/components/FormattedDate.astro';
+import FormattedDate from "@/components/FormattedDate.astro";
 
-import { SITE_TITLE } from '@/consts';
+import { SITE_TITLE } from "@/consts";
 
-import { zenblog } from '@/lib/blog'
+import { zenblog } from "@/lib/blog";
 
 const posts = await zenblog.posts.list();
 ---
 
-<MainLayout title={`Blog Posts - ${SITE_TITLE}`} description={"Read my thoughts."}>
-	<h1>
-		Blog
-	</h1>
+<MainLayout
+  title={`Blog Posts - ${SITE_TITLE}`}
+  description={"Read my thoughts."}
+>
+  <h1>Blog</h1>
 
-	<p>
-		As you might have noticed, I actually write my blog posts in Brazilian Portuguese
-		and I'm not really interested in translating them in the near future.
-	</p>
+  <p>
+    As you might have noticed, I actually write my blog posts in Brazilian
+    Portuguese and I'm not really interested in translating them in the near
+    future.
+  </p>
 
-	<div class="not-prose grid grid-cols-2 gap-x-3 gap-y-4">
-		{
-			posts.data.map((post) => (
-				<a href={`/blog/${post.slug}/`} class="mb-4 block">
-					<article>
-						<img 
-							src={post.cover_image} 
-							alt={`Capa de ${post.title}`} 
-							class="rounded-md object-cover aspect-video w-full"
-						/>
-						<h2 class="mt-4 text-xl font-semibold text-neutral-900 dark:text-neutral-100">{post.title}</h2>
-						<p class="text-neutral-700 dark:text-neutral-300 text-base">
-							{post.excerpt}
-						</p>
+  <div class="not-prose flex flex-col gap-y-4">
+    {
+      posts.data.map((post) => (
+        <a href={`/blog/${post.slug}/`} class="flex">
+          <article class="flex items-center justify-between w-full gap-x-2">
+            <img
+              src={post.cover_image}
+              alt={`Capa de ${post.title}`}
+              class="hidden rounded-md object-cover aspect-square size-16 md:size-24 border"
+            />
+            <div>
+              <h2 class="text-lg md:text-xl font-semibold">{post.title}</h2>
+              <p class="sr-only md:not-sr-only text-sm text-neutral-500">
+                {post.excerpt}
+              </p>
+            </div>
 
-						<span class="text-neutral-600 dark:text-neutral-400 text-xs">
-							<FormattedDate date={new Date(post.published_at)} />
-						</span>
-					</article>
-				</a>
-			))
-		}
-	</div>
+            <span class="inline-block ml-auto text-right text-xs md:text-base">
+              <FormattedDate date={new Date(post.published_at)} />
+            </span>
+          </article>
+        </a>
+      ))
+    }
+  </div>
 </MainLayout>
