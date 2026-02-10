@@ -1,8 +1,15 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+
+import { zenblog } from "@/lib/blog";
+
+const latestPost = await zenblog.posts.list({
+  limit: 1,
+}).then(data => data.data[0]);
+
 ---
 
-<header class="w-full flex-1">
+<header class="w-full md:max-w-[200px] flex-1">
   <nav class="py-2 px-4 flex items-center justify-between md:block">
     {/*<div class="size-8 sm:hidden"></div>*/}
     <a href="/" class="font-bold text-lg sm:text-xl font-serif">
@@ -12,6 +19,14 @@ import HeaderLink from "./HeaderLink.astro";
       <HeaderLink href="/">About</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/work">Work</HeaderLink>
+    </div>
+
+    <div class="hidden md:block mt-6">
+      <span class="font-bold text-lg sm:text-xl font-serif">
+          Latest Post
+      </span>
+
+      <a href={`/blog/${latestPost.slug}`} class="block text-sm font-semibold mt-4 underline">{latestPost.title}</a>
     </div>
   </nav>
 </header>
