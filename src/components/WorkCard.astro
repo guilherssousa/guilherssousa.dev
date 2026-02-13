@@ -1,21 +1,20 @@
 ---
+import { Github, Link } from '@lucide/astro';
 interface Props {
   name: string;
   image?: string;
-  href?: string;
+  demo?: string;
+  repo?: string;
 }
 
-const { name, image, href } = Astro.props;
+const { name, image, demo, repo } = Astro.props;
 
 const titleClassName = [
   "font-semibold text-xl black border-b-2",
-  href
-    ? "border-b-2 border-dashed w-fit border-b-neutral-300"
-    : "border-transparent",
 ];
 ---
 
-<a href={href} target="_blank">
+<div class="border px-2 py-1">
   {image && <img src={image} alt={name} />}
 
   <h3 class={titleClassName.join(" ")}>{name}</h3>
@@ -23,4 +22,9 @@ const titleClassName = [
   <p class="leading-normal mt-2">
     <slot />
   </p>
-</a>
+
+  <div class="mt-auto">
+    {demo && <a href={demo} target="_blank"><Link> Demo</a>}
+    {repo && <a href={repo} target="_blank"><Github> Repo</a>}
+  </div>
+</div>
