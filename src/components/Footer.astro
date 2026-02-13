@@ -1,5 +1,5 @@
 ---
-import { Github, Linkedin, Gitlab } from "@lucide/astro";
+import { Github, Linkedin, Gitlab, Rss } from "@lucide/astro";
 ---
 
 <div>
@@ -9,6 +9,16 @@ import { Github, Linkedin, Gitlab } from "@lucide/astro";
     <strong>Talk with me!</strong>
 
     <ul class="flex gap-x-4 items-baseline">
+      <li>
+        <a
+          class="underline"
+          target="_blank"
+          href="/rss.xml"
+        >
+          <span class="sr-only">RSS Feed</span>
+          <Rss />
+        </a>
+      </li>
       <li>
         <a
           class="underline"
