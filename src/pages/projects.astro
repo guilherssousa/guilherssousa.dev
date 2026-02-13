@@ -7,37 +7,46 @@ import { SITE_TITLE } from '../consts';
 ---
 
 <Main title={`Projects - ${SITE_TITLE}`} descriptions="My highlighted projects">
-	<h1>A collection of my favorite projects</h1>
+	<h2>A collection of my favorite projects</h2>
 
 	<p>
 		I've done a lot of things in those last years, unfortunately, most of them are
 		corporate contributions I've done to companies. But I'm still able to showcase some cool stuff:
 	</p>
 
-	<h2>Clients</h2>
+	<h3>Clients</h3>
 
 	<div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-4">
-		<WorkCard name="Ruan Dias" href="https://ruanpdias.com/">
+		<WorkCard name="Ruan Dias" link="https://ruanpdias.com/">
 			Ruan Dias is a video editor from Brazil.
 		</WorkCard>
 
-		<WorkCard name="Nice House" href="https://nicehousebr.com">
+		<WorkCard name="Nice House" link="https://nicehousebr.com">
 			Nice House is a entertainment hub 
 			with the most talented creators from Brazil.
 		</WorkCard>
 	</div>
 
-	<h2>Personal</h2>
+	<h3>Personal</h3>
 
 	<div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-4">
-		<WorkCard name="vsc2wt" href="https://vsc2wt.guilherssousa.dev">
+		<WorkCard name="vsc2wt" demo="https://vsc2wt.guilherssousa.dev">
 			A tool that converts VS Code themes to
 			Windows Terminal color schemes.
 		</WorkCard>
 
 
-		<WorkCard name="Sorting Visualizer" href="https://sorting.guilherssousa.dev">
+		<WorkCard name="Sorting Visualizer" demo="https://sorting.guilherssousa.dev">
 			View sorting algorithms in action.
+		</WorkCard>
+
+		<WorkCard name="An actual Pokédex" link="https://www.linkedin.com/feed/update/urn:li:activity:7099558659986194432/">
+			As the name says, a Pokédex that actually works with the games.
+		</WorkCard>
+
+		<WorkCard name="Mew Machine" repo="https://github.com/guilherssousa/mew-machine">
+			A Python script that mimicks the Mew gift events 
+			from the first generation Pokémon games.
 		</WorkCard>
 
 		<WorkCard name="Correio Anônimo">
@@ -48,27 +57,18 @@ import { SITE_TITLE } from '../consts';
 			Save and organize your favorite tweets
 			in your phone.
 		</WorkCard>
-
-		<WorkCard name="An actual Pokédex" href="https://www.linkedin.com/feed/update/urn:li:activity:7099558659986194432/">
-			As the name says, a Pokédex that actually works with the games.
-		</WorkCard>
-
-		<WorkCard name="Mew Machine" href="https://github.com/guilherssousa/mew-machine">
-			A Python script that mimicks the Mew gift events 
-			from the first generation Pokémon games.
-		</WorkCard>
 	</div>
 
-	<h2>Open Source contributions</h2>
+	<h3>Open Source contributions</h3>
 
 	<div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-4">
-		<WorkCard name="SWR" href="https://swr.vercel.app/pt-BR">
+		<WorkCard name="SWR" link="https://swr.vercel.app/pt-BR">
 			I translated the entire project documentation to
 			Brazilian Portuguese and frequently review the
 			new translations.
 		</WorkCard>
 
-		<WorkCard name="Nextra" href="https://nextra.site">
+		<WorkCard name="Nextra" link="https://nextra.site">
 			Helped maintainers to investigate user projects
 			memory bottlenecks.
 		</WorkCard>

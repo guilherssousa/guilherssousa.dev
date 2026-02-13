@@ -5,16 +5,17 @@ interface Props {
   image?: string;
   demo?: string;
   repo?: string;
+  link?: string;
 }
 
-const { name, image, demo, repo } = Astro.props;
+const { name, image, demo, repo, link } = Astro.props;
 
 const titleClassName = [
-  "font-semibold text-xl black border-b-2",
+  "font-semibold text-xl",
 ];
 ---
 
-<div class="border px-2 py-1">
+<div class="border border-neutral-600 rounded-sm px-3 py-2 flex flex-col">
   {image && <img src={image} alt={name} />}
 
   <h3 class={titleClassName.join(" ")}>{name}</h3>
@@ -23,8 +24,9 @@ const titleClassName = [
     <slot />
   </p>
 
-  <div class="mt-auto">
-    {demo && <a href={demo} target="_blank"><Link> Demo</a>}
-    {repo && <a href={repo} target="_blank"><Github> Repo</a>}
+  <div class="pt-2 mt-auto text-sm flex gap-x-1">
+    {demo && <a href={demo} target="_blank" class="flex items-center gap-x-1"><Link class="size-6" /> Demo</a>}
+    {repo && <a href={repo} target="_blank" class="flex items-center gap-x-1"><Github class="size-6" /> Repo</a>}
+    {link && <a href={link} target="_blank" class="flex items-center gap-x-1"><Link class="size-6" /> Link</a>}
   </div>
 </div>
