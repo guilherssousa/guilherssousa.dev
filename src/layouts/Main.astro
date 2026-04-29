@@ -14,6 +14,7 @@ const { title, description, image } = Astro.props;
 
   <body
     class:list={[
+      "font-mono",
       "max-w-screen-md mx-auto pt-6",
       "bg-slate-50 text-neutral-700",
       "divide-neutral-200 dark:divide-white",
@@ -21,10 +22,10 @@ const { title, description, image } = Astro.props;
     ]}
   >
     <Header />
-    <main class="md:ml-6 py-4 px-4 antialised">
+    <main class="w-fit py-4 px-4 antialised flex flex-col mx-auto">
       <article
         class:list={[
-          "prose w-full prose-a:no-underline",
+          "prose prose-a:no-underline",
           "prose-cyan dark:prose-invert",
         ]}
       >

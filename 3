@@ -28,7 +28,7 @@ const posts = await zenblog.posts.list();
     {
       posts.data.map((post) => (
         <a href={`/blog/${post.slug}/`} class="flex">
-          <article class="flex items-start justify-between w-full gap-x-2">
+          <article class="flex items-center justify-between w-full gap-x-2">
             <img
               src={post.cover_image}
               alt={`Capa de ${post.title}`}
@@ -41,7 +41,7 @@ const posts = await zenblog.posts.list();
               </p>
             </div>
 
-            <span class="inline-block ml-auto text-right text-[8px] md:text-base">
+            <span class="inline-block ml-auto text-right text-xs md:text-base">
               <FormattedDate date={new Date(post.published_at)} />
             </span>
           </article>

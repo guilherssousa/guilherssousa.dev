@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        mono: ["Cascadia Mono", ...defaultTheme.fontFamily.mono],
       },
     },
   },
